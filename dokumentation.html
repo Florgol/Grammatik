@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Animation</a></li>
+                <li><a href="dokumentation.html">Dokumentation</a></li>
+            </ul>
+        </nav>
+  
+
+      </header>
+        <br>
+        <br>
+        <br>
+        <p>Technisch: 
+            
+            <br>
+            <br>
+            Ich habe das p5.js Framework für die Darstellung des Generators für arithmetische Ausdrücke, also der Tabelle und den Regeln, verwendet.
+        </p>
+        <p>Fachlich: 
+
+            <br>
+            <br>
+            Ich habe mich erstmal darauf konzentriert die richtigen grammatischen Regeln zu finden um die gewünschten arithmetischen Ausdrücke zu zeichnen.
+            <br>
+            Ich habe mich dazu entschieden die Regeln als Arrays in einem dictionary zu speichern:
+
+            <br>
+            <br>
+            <img src="images/regeln.png" alt="grammatische Regeln">
+            <br>
+            <br>
+
+
+            Dann brauchte ich eine Funktion mit der ich arithmetische Ausdrücke generieren kann.
+            <br>
+            Ich habe mich hier für eine rekursive Funktion entschieden, die mir die veränderten Ausdrücke und Regeln in jeweils einem Array speichert.
+            <br>
+            So kann ich später auf diese Arrays zugreifen und mit setInterval() die Animationsgeschwindigkeit bestimmen.
+
+            <br>
+            <br>
+            <img src="images/expand.png" alt="expand Funktion">
+            <br>
+            <br>
+
+            Damit ich nicht sehr viele Parameter an jede Funktion übergeben muss, habe ich mich für globale Variablen entschieden.
+
+            <br>
+            <br>
+            <img src="images/globaleVariablen.png" alt="globale Variablen">
+            <br>
+            <br>
+
+            Hier sind noch ein paar Hilfsfunktion, die ich benötige um die Animationsgeschwindigkeit einzustellen, die Tabelle und die Regeln zu zeichnen.
+
+            <br>
+            <br>
+            <img src="images/hilfsfunktionen.png" alt="Hilfsfunktionen">
+            <br>
+            <br>
+
+            Als nächsten Schritt musste ich die jeweils nächste Zeile zeichnen können. Ich mache das mit drawAnimation()
+
+            <br>
+            <br>
+            <img src="images/drawAnimation.png" alt="drawAnimation() Funktion">
+            <br>
+            <br>
+
+            Um die Animation zu starten, benutze ich startAnimation(), welche drawAnimation() mit setInterval() aufruft, 
+            also abhängig von einer eingestellten Animationsgeschwindigkeit ist. 
+            <br>
+            Ausserdem löscht diese Funktion den vorherigen Ausdruck aus der Tabelle, bevor sie einen neuen beginnt
+
+            <br>
+            <br>
+            <img src="images/startAnimation.png" alt="startAnimation()">
+            <br>
+            <br>
+
+            Hier noch die setup() Funktion mit den Buttons, welche die genannten Funktionen auslösen
+
+            <br>
+            <br>
+            <img src="images/setupFunktion.png" alt="setup Funktion">
+            <br>
+            <br>
+
+        </p>
+
+
+  </body>
+</html>
