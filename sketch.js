@@ -11,7 +11,7 @@ var ausdruck = "A";
 //Hier wird eine maximale Rekursionstiefe
 //festgelegt
 var expansionCount = 0;
-var maxExpansions = 5;
+var maxExpansions = 7;
 
 //ein Intervalobjekt, wichtig um die Animationsgeschwindigkeit 
 //mit der Funktion setInterval() einzustellen
